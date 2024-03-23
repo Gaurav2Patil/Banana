@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %} Products {% endblock title %}
+
+{% block head%}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'css/p.css'%}">
+{% endblock head%}
+
+{% block body %}
+
+    <div class="product_container">
+
+
+        <div class="section_1">
+            <div id="Info">
+                <h3>Wall Paints</h3>
+                <p>Explore the versatile range of interior paint products for you!</p> 
+            </div>
+        </div>
+
+        <div class="section_2">
+
+            <div id="Interior" class="product_item">
+                    <div class="card_details">
+                        <h4 class="card_title">Interior</h4>
+                        <p class="card_detail">Emulsion</p>
+                        <a href="/interior"><button type="submit">Explore</button></a>
+                    </div>
+                <img src={% static 'images/product_images/P5.jpg' %} alt="Paints">
+            </div>
+
+            <div id="Exterior" class="product_item">
+                    <div class="card_details">
+                        <h4 class="card_title">Exterior</h4>
+                        <p class="card_detail">Emulsion</p>
+                        <a href="/exterior"><button type="submit">Explore</button></a>
+                    </div>
+                <img src={% static 'images/product_images/P2.jpg' %} alt="Paints">
+            </div>
+
+            <div id="Base_Paint" class="product_item">               
+                <div class="card_details">
+                    <h4 class="card_title">Base </h4>
+                    <p class="card_detail">Paints</p>
+                    <a href="/base_paint"><button type="submit">Explore</button></a>
+                </div>
+
+                <img src={% static 'images/product_images/P4.jpg' %} alt="Paints">
+            </div>
+        </div>
+    </div>
+{% endblock body%}

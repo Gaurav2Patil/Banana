@@ -1,0 +1,32 @@
+{% load static %}
+
+{% block head%}
+    <link rel="stylesheet" href="{% static 'css/why_choose_us.css'%}">
+{% endblock %}
+
+{% block body %}
+
+<div class="why_1">
+    <h2>WHY CHOOSE OUR SERVICES ?</h2>
+    <div class="S1">
+        <img src="{%static "images/services/why_choose_us_logos/Experts_advice.svg"%}" alt="">
+        <span>Expert Advice</span>
+    </div>
+    <div class="S2">
+        <img src="{%static "images/services/why_choose_us_logos/Trained_professionals.svg"%}" alt="">
+        <span>Trained Professionals</span>
+    </div>
+    <div class="S3">
+        <img src="{%static "images/services/why_choose_us_logos/Personalised_services.svg"%}" alt="">
+        <span>Personalised Services</span>
+    </div>
+    <div class="S4">
+        <img src="{%static "images/services/why_choose_us_logos/End_to_End_Guidence.svg"%}" alt="">
+        <span>End to End Guidence</span>
+    </div>
+    <div class="S5">
+        <img src="{%static "images/services/why_choose_us_logos/Dust_free_services.svg"%}" alt="">
+        <span>Dust free Services</span>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,53 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> 
+        {% block title %} Banana Paints {% endblock %}
+    </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static "css/base.css"%}">
+    <link rel="icon" href="{% static "images/logo_5.ico"%}">
+    {% block head %} {% endblock %}
+  </head>
+  <body>
+    <!-- Header started -->
+
+    <header class="header">
+      {% include 'navbar.html' %}
+    </header>
+
+    <!-- Header END -->
+
+    <!-- Middle content START -->
+    <div class="main">
+      {% block body%}
+      {% include "welcome.html" %}
+      {% include "get_in_touch.html" %}
+      <br>
+      <br>
+      {% include "contact_now.html" %}
+      <br>
+      <br>
+      {% include "why_choose_us.html" %}
+      <br>
+      <br>
+      {% include "contact_us_info.html"%}
+      {% endblock %}
+    </div>
+
+    <!-- Midddle content END -->
+
+    <!-- Footer started -->
+      
+    <footer class="footer">
+      {% include "footer.html" %}
+    </footer>
+
+    <!-- Footer END-->
+</body>
+</html>
+

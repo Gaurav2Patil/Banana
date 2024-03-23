@@ -1,0 +1,13 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.thanks{
+    margin-top: 10rem;
+    padding-top: 7rem;
+    height: 70vh;
+    width: 100%;
+    text-align: center;
+    color: blueviolet;
+}

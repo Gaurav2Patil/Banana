@@ -1,0 +1,48 @@
+{% load static %}   
+
+{% block head %}
+    <link rel="stylesheet" href="{% static "css/vision_mission.css"%}">
+{% endblock %}
+
+{% block body %}
+
+{% comment %} <div class="all_container">
+    <div class="vision">
+        <i id="icon_tag">
+            <span class="fa-regular--eye"></span>
+        </i>
+        <h1 id="h1_tag">VISION</h1>
+        <p id="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur est deserunt corrupti aut nulla enim.</p>
+    </div>
+    <div class="mission">
+        <h1 id="h1_tag">MISSION</h1>
+        <p id="paragraph">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor nam, pariatur voluptatem, mollitia commodi.</p>
+        <i id="icon_tag">
+            <span class="bi--rocket-takeoff"></span>
+        </i>
+    </div>
+</div> {% endcomment %}
+
+
+{% comment %} New vision_mission {% endcomment %}
+<div class="vision_mission">
+    <div class="vision_container">
+        <div class="vision_image">
+            <img class="vision_img_1" src="{%static "/images/vision_mission/vision.jpg"%}" alt="">
+        </div>
+        <div class="vision_content">
+            <h1 id="h1_tag">VISION</h1>
+            <P id="P_tag">Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, et tenetur incidunt nobis illum aperiam ratione soluta modi eos pariatur quis repellat unde, doloribus ea omnis numquam nisi magni nam?Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam natus sit eos autem dolore .</P>
+        </div>
+    </div>
+    <div class="mission_container">
+        <div class="mission_content">
+            <h1 id="h1_tag">Mission</h1>
+            <P id="P_tag">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam natus sit eos autem dolore .</P>
+        </div>
+        <div class="mission_image">
+            <img class="mission_img_1" src="{%static "/images/vision_mission/mission.jpg"%}" alt="">
+        </div>
+    </div>
+
+{% endblock %}

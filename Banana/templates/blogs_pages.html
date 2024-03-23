@@ -1,0 +1,32 @@
+s{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Blogs{% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static "css/blogs_pages.css"%}">
+{% endblock %}
+
+{% block body %}
+
+    <div class="blog_details">
+        <div class="blog_images">
+            <img src="{{blogs_pages_data.image.url}}" alt="">
+        </div>
+        <div class="blog_title">
+            <h1>
+                {{blogs_pages_data.title}}
+            <h1>
+        </div>
+        <div class="blog_description">
+            <p>{{blogs_pages_data.description}}</p>
+        </div>
+        <div class="date_time">
+            <span>{{blogs_pages_data.date_time}}</span>
+        </div>
+        <div class="author_name">
+            <span>{{blogs_pages_data.author_name}}</span>
+        </div>
+    </div>
+
+{%endblock %}

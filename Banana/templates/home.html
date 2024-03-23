@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Trusted Primers,Putty Suppliers.{% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static "css/home.css"%}">
+{% endblock %}
+
+{% block body %}
+
+  {% include "carousel.html" with Carousel_data=carousel_data %}
+    {% include "welcome.html" %}
+    {% include "get_in_touch.html" %}
+    <br><br>
+    {% include "contact_now.html" %}
+    <br><br>
+    {% include "why_choose_us.html" %}
+    <br><br>
+    {% include "vision_mission.html" %}
+    {% include "our_visionary.html" %}
+{% endblock %}

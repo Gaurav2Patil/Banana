@@ -1,0 +1,32 @@
+{% load static %}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static "css/carousel.css"%}">
+{% endblock %}
+
+<br>
+<br>
+<br>
+
+<div id="carouselExampleFade" class="carousel slide carousel-fade" >
+  <div class="carousel-inner">
+    {% for row in Carousel_data %}
+    <div class="carousel-item {% if forloop.first %} active {% endif %}">
+      <img src="{{row.image.url}}" alt="wait for loading....">
+      <div class="carousel-caption">
+        <h5>{{row.title}}</h5>
+        <p>{{row.description}}</p>
+      </div>
+    </div>
+    {% endfor %}  
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+

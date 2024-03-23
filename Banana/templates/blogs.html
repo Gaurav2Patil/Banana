@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Blogs{% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static "css/blogs.css"%}">
+{% endblock %}
+
+{% block body %}
+    <div class="blogs">
+        <div class="hero">
+            <div class="Hero">
+                <div class="hero_container col-md-8">
+                    <h1 id="title">Unleash Your Inner Artist</h1>
+                    <p>The world is a vibrant tapestry of colors, and paints are our tools to recreate and express this vibrancy. Whether you're a seasoned artist or just picking up a brush for the first time, understanding colors and paints is essential for unleashing your creative potential.</p>
+                </div>
+                <div class="container_image">
+                    <img src="{%static "images/Exterior_product_images/Ex_2.jpg" %}" alt="..."> 
+                </div>
+                {% comment %} <div class="footer">
+                    <button id="btn">Memories</button>
+                    <span> 1st Jan 2024 </span>
+                    <span> , </span>
+                    <span> G Gemini </span>
+                </div> {% endcomment %}
+            </div>
+        </div>
+        {% for row in blogs_data %}
+        <div class="blogs_container">
+            <div class="card">
+                <img src="{{row.image.url}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h6 class="card-title">{{row.title}}</h6>
+                    <p class="card-text">{{row.description}}</p>
+                    <br>
+                    <span> {{row.date_time}} </span>
+                    <span> , </span>
+                    <span> {{row.author}} </span>
+                    <br>
+                    <a href="/blogs/{{row.id}}"><button id="btn">Read More</button></a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}  
+    </div>
+    
+{% endblock  %}

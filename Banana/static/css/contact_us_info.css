@@ -1,0 +1,33 @@
+.map_container{
+	display: flex;
+	margin-block: 5rem;
+	gap:1rem;
+	padding: 1rem;
+	border: 2px solid lightgrey;
+	box-shadow: 0px 0px 1px inset;
+}
+
+.map_container .info{
+	display: flex;
+	flex-direction: column;
+	padding-left: 2rem;
+	border-left: 3px solid;
+	border-left-color: lightgrey;
+}
+
+.map_container .info #h1_tag{
+	color: #8a2be2;
+    padding: 1rem;
+}
+
+.map_container .info .address,.mobile_no,.email_address{
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	padding-inline: 1rem;
+	gap: 1rem;
+}
+
+.map_container .info #address_icon,#mobile_icon,#email_icon{
+	color: #8a2be2;
+}

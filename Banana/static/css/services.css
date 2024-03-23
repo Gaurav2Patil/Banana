@@ -1,0 +1,217 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.services_container{
+    margin-top: 5rem;
+}
+
+.services_container .context{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #8a2be2;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    margin-top: 1rem;
+    margin-left: 10rem;
+    align-items: center;
+}
+
+.services_container .context .main_text,.head_context{
+    padding: 1rem;
+    margin: 1rem;
+}
+
+.services_container .context .main_text{
+    /* background-color: aqua; */
+    text-align: start;
+}
+
+.services_container .context .head_context{
+    /* background-color: aquamarine; */
+    width: 40vw;
+}
+
+.services_container .context .main_text h1,.head_context p{
+    color: #ffffff;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.services_1{
+    background-color: #ffffff;
+    margin-top: 5rem;
+    padding-top: 5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.services_1 .painting {
+    display: flex;
+}
+
+.services_1 .painting .media video {
+    position: relative;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    z-index: 0;
+}
+
+.services_1 .painting .painting_containt{
+    position: absolute;
+    text-align: start;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding-top: 5rem;
+}
+
+
+.services_1 .painting .media video,.painting_containt{
+    height: 100vh;
+    width: 98vw;
+}
+
+.services_1 .painting .painting_containt ul{
+    font-size: 50px;
+}
+
+.services_1 .painting .painting_containt ul h2{
+    font-size: 50px;
+    font-weight: 50;
+    color: #FCFCFF;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.services_1 .painting .painting_containt ul p{
+    font-size: 20px;
+    font-weight: 100;
+    width: 50%;
+    color:whitesmoke;
+    margin-top: 5rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 7;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+
+}
+
+
+.services_2{
+    background-color: #ffffff;
+    margin-top: 5rem;
+    padding-top: 0.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.services_2 .painting {
+    display: flex;
+}
+
+.services_2 .painting .media video {
+    position: relative;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    z-index: 0;
+}
+
+.services_2 .painting .painting_containt{
+    position: absolute;
+    text-align: start;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding-top: 5rem;
+}
+
+
+.services_2 .painting .media video,.painting_containt{
+    height: 100vh;
+    width: 98vw;
+}
+
+.services_2 .painting .painting_containt ul{
+    font-size: 50px;
+}
+
+.services_2 .painting .painting_containt ul h2{
+    font-size: 50px;
+    font-weight: 50;
+    color: #FCFCFF;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.services_2 .painting .painting_containt ul p{
+    font-size: 20px;
+    font-weight: 100;
+    width: 50%;
+    color:whitesmoke;
+    margin-top: 5rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 7;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+
+}
+
+
+.services_3{
+    background-color: #ffffff;
+    margin-top: 5rem;
+    padding-top: 0.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.services_3 .painting {
+    display: flex;
+}
+
+.services_3 .painting .media video {
+    position: relative;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    z-index: 0;
+}
+
+.services_3 .painting .painting_containt{
+    position: absolute;
+    text-align: start;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding-top: 5rem;
+}
+
+
+.services_3 .painting .media video,.painting_containt{
+    height: 100vh;
+    width: 98vw;
+}
+
+.services_3 .painting .painting_containt ul{
+    font-size: 50px;
+}
+
+.services_3 .painting .painting_containt ul h2{
+    font-size: 50px;
+    font-weight: 50;
+    color: #FCFCFF;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.services_3 .painting .painting_containt ul p{
+    font-size: 20px;
+    font-weight: 100;
+    width: 50%;
+    color:whitesmoke;
+    margin-top: 5rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 10;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+
+}

@@ -1,0 +1,33 @@
+{% load static %}   
+
+{% block head %}
+    <link rel="stylesheet" href="{% static "css/contact_us_info.css"%}">
+{% endblock %}
+
+{% block body %}
+
+<div class="map_container">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d898.7392924139552!2d73.75032846956255!3d18.569888898908342!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTjCsDM0JzExLjYiTiA3M8KwNDUnMDMuNSJF!5e1!3m2!1sen!2sin!4v1709403831894!5m2!1sen!2sin" width="1000" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+    <div class="info">
+        <h1 id="h1_tag"> You can find us here....</h1>
+        <br><br>
+        <div class="address" >
+            <i id="address_icon" class="fa-solid fa-location-dot"></i>
+            <h6>Kolekar Palace, Mhalunge , Pune.</h6>
+        </div>
+        <br>
+        <div class="mobile_no">
+            <i id="mobile_icon" class="fa-solid fa-phone"></i>
+            <h6>+91 12345 67890</h6>
+        </div>
+        <br>
+        <div class="email_address">
+            <i id="email_icon" class="fa-regular fa-envelope"></i>
+            <h6>bananapaints@gmail.com</h6>
+        </div>
+    </div>
+    </div>
+
+
+{% endblock %}

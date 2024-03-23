@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %} Exterior Products {% endblock title %}
+
+{% block head%}
+    <link rel="stylesheet" href="{% static 'css/Exterior.css'%}">
+{% endblock head%}
+
+{% block body %}
+
+<div class="contact_box" id="contact_box">
+  <button class="btnn_close" onclick="toggle()">&times;</button>
+  <form action="{% url "Exterior" %}" method="post" >
+    {% csrf_token %}
+    <!-- <h1 id="form-title">Contact us</h1> -->
+    <input type="text" class="input-field" name="First-Name" id="First-Name" placeholder="First-Name" required>
+    <input type="text" class="input-field" name="Last-Name" id="Last-Name" placeholder="Last-Name" required>
+    <input type="tel" class="input-field" name="Mbl_No" id="Mbl-No" placeholder="Enter 10 digit Mobile No."
+      pattern="^\d{10}$" required>
+    <input type="text" class="input-field" name="Pincode" id="Pincode" placeholder="Pincode" pattern="^\d{6}$" required>
+    <input type="email" class="input-field" name="Email" id="Email" placeholder="Email" required>
+    <textarea type="text" class="input-field textarea-field" name="Adress" id="Adress" placeholder="Adress"></textarea>
+    <input type="checkbox" id="terms" class="input-field-checkbox" name="terms" required>
+    <label for="terms">I hereby allow a Banana Paints authorised representative to call/whatsapp/sms/email me regarding
+      offers and promotions with respect to the product.</label>
+    <div><button class="form-btn" name="send" type="submit">Submit</button></div>
+  </form>
+</div>
+<script>
+  function toggle() {
+    var container = document.getElementById("container");
+    container.classList.toggle("active");
+    var contact_box = document.getElementById("contact_box");
+    contact_box.classList.toggle("active");
+    document.getElementsByTagName("input").value = "";
+  }
+</script>
+
+<div class="container" id="container">
+    {% for row in exterior_products_data %}
+    <div class="card mb-3">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="{{row.image.url}}" class="img-fluid rounded-start" alt="{{row.title}}">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">{{row.title}}</h5>
+              <p class="card-text">{{row.description}}</p>
+              <p class="card-text"><small class="text-muted">{{row.bullet_points}}</small></p>
+              <button class="btn" onclick="toggle()">Explore</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    {% endfor %}  
+</div>
+
+
+{% endblock body%}

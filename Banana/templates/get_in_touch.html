@@ -1,0 +1,76 @@
+{% load static %}   
+
+{% block head %}
+    <link rel="stylesheet" href="{% static "css/get_in_touch.css"%}">
+{% endblock %}
+
+{% block body %}
+
+<div class="form_container" id="form_container">
+    <div class="container_title">
+        <h2 id="h3">Get in touch</h2>
+    </div>
+    <form class="form" action="{% url "Form" %}" method="post">
+        <!-- <h1 id="form-title">Contact us</h1> -->
+        {% csrf_token %}
+        <input type="text" class="input-field" name="First-Name" id="First-Name" placeholder="First-Name"required>
+        <input type="text" class="input-field" name="Last-Name" id="Last-Name" placeholder="Last-Name"required>
+        <input type="tel" class="input-field" name="Mbl_No" id="Mbl-No" placeholder="Enter 10 digit Mobile No." pattern="^\d{10}$"required>
+        <input type="text" class="input-field" name="Pincode" id="Pincode" placeholder="Pincode" pattern="^\d{6}$"required>
+        <input type="email" class="input-field" name="Email" id="Email" placeholder="Email" required>
+        <input type="text" class="input-field textarea-field" name="Adress" id="Adress" placeholder="Adress">
+        <select class="select_tag" name="query" id="query" onchange="changeOptions(this.value)">
+            <option value="">-- I want to --</option>
+            <option value="Paint Buyer">Paint Buyer</option>
+            <option value="Request Service">Request Service</option>
+            <option value="Other Query">Query Something</option>
+        </select>
+
+        <div id="paintChoices" style="display: none;">
+            <select class="select_tag" name="paint_choice">
+                <option value="">--Paint Selection:--</option>
+                <option value="Interior">Interior</option>
+                <option value="Exterior">Exterior</option>
+                <option value="Base Paints">Base Paints</option>
+            </select>
+        </div>
+
+        <div id="serviceChoices" style="display: none;">
+            <select class="select_tag" name="service_choice">
+                <option value="">--Service Selection:--</option>
+                <option value="Painting Services">Painting Services</option>
+                <option value="Waterproofing Services">Waterproofing Services</option>
+                <option value="Putty Services">Putty Services</option>
+                <option value="Wall Design Services">Wall Design Services</option>
+            </select>
+        </div>
+
+        <div id="messageArea" style="display: none;">
+            <textarea name="message" id="message" rows="5" maxlength="500" placeholder="Message"></textarea>
+        </div>
+        <button class="form-btn" name="send" type="submit">Submit</button>
+    </form>
+</div>
+
+<script>
+    function changeOptions(selection) {
+        const paintChoices = document.getElementById("paintChoices");
+        const serviceChoices = document.getElementById("serviceChoices");
+        const messageArea = document.getElementById("messageArea");
+
+        paintChoices.style.display = "none";
+        serviceChoices.style.display = "none";
+        messageArea.style.display = "none";
+        messageArea.value = ""; // Clear message on selection change
+
+        if (selection === "Paint Buyer") {
+            paintChoices.style.display = "block";
+        } else if (selection === "Request Service") {
+            serviceChoices.style.display = "block";
+        } else if (selection === "Other Query") {
+            messageArea.style.display = "block";
+        }
+    }
+    </script>
+
+{% endblock %}

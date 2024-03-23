@@ -1,0 +1,15 @@
+body{
+    padding: 0px;
+    margin: 0px;
+}
+
+.Ccontainer .image_container{
+	background-color: aliceblue;
+}
+
+.Ccontainer .image_container #image{
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+	background-size: cover;
+}

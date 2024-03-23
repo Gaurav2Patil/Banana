@@ -1,0 +1,60 @@
+{% load static %}
+
+{% block head %} 
+<link rel="stylesheet" href="{% static "css/navbar.css"%}">
+{% endblock %}
+  <!-- {% comment %} <nav>
+    <div class="navbar">
+      <a href="/home"><img src="{% static "images/compressed/logo_4.svg" %}" alt="" class="navbar_logo"></a>
+        <ul class="navbar-list">
+            <a id="Home" href="/home">Home</a>
+            <a id="Products" href="/products">Products</a>
+            <a id="Services" href="/services">Services</a>
+            <!-- {% comment %} <a id="About" href="/about_us">About</a>
+            <a id="Contact" href="/contact_us">Contact</a>
+            <a id="Sign_in" href="/login">Sign In</a> {% endcomment %} 
+        {% comment %} </ul>
+    </div>
+</nav> {% endcomment %}  -->
+<nav>
+  <div class="navbar">
+    <a id="navbar_logo_anchor" href="/home"><img src="{%static "images/compressed/logo_4.svg"%}" alt="" class="navbar_logo"></a>
+      <ul class="navbar-list">
+          <li><a id="Home" href="/home">Home</a></li>
+          <li><a id="Products" href="/products">Products</a>
+              <ul class="product-list">
+                <li><a href="/interior">Interior Paints</a></li>
+                <li><a href="/exterior">Exterior Paints</a></li>
+                <li><a href="/base_paint">Base Paints</a></li>
+              </ul>
+          </li>
+          <li><a id="Services" href="/services">Services</a></li>
+          <li><a id="Choose_colors" href="/choose_color">Wonder colors</a></li>
+          <i class="fa-solid fa-bars " onclick="show_slider()"></i>
+      </ul>
+  </div>
+</nav>
+  <div class="sider">
+    <ul class="sidebar">
+        <i class="fa-solid fa-xmark" onclick="hide_sidebar()"></i>
+        <li><a id="Home" href="/home">Home</a></li>
+        <li><a id="Products" href="/products">Products</a></li>
+        <li><a id="Services" href="/services">Services</a></li>
+        <li><a id="Choose_colors" href="/choose_color">Wonder colors</a></li>
+    </ul>
+  </div>
+
+<script>
+
+
+  function show_slider() {
+      const sidebar = document.querySelector('.sidebar');
+      sidebar.style.display = 'flex';
+  }
+
+  function hide_sidebar() {
+      const sidebar = document.querySelector('.sidebar');
+      sidebar.style.display = 'none';
+  }
+
+</script>

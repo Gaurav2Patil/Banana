@@ -1,0 +1,45 @@
+{% load static %}   
+
+{% block head %}
+    <link rel="stylesheet" href="{% static "css/our_visionary.css"%}">
+{% endblock %}
+
+{% block body %}
+
+<div class="our_visionary">
+    <div class="h1_tag_container">
+        <h1 id="h1">Our visionary</h1>
+    </div>
+    <div class="img_container">
+        <div class="v1">
+            <div id="info">
+                <h3 id="h3_tag">Person</h3>
+                <p id="p_tag">Info ABCDE</p>
+            </div>
+            <br>
+            <img id="v_1" src="{%static "/images/our_visionary/m1.jpg"%}"  alt="">
+        </div> 
+        <div class="v2">
+            <div id="info">
+                <h3 id="h3_tag">Person</h3>
+                <p id="p_tag">Info ABCDE</p>
+            </div>
+            <br>
+            <img id="v_2" src="{%static "/images/our_visionary/m3.jpg"%}"  alt="">
+        </div>
+        <div class="v3">
+            <div id="info">
+                <h3 id="h3_tag">Person</h3>
+                <p id="p_tag">Info ABCDE</p>
+            </div>
+            <br>
+            <img id="v_3" src="{%static "/images/our_visionary/l1.jpg"%}" alt="">
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
+
+
+

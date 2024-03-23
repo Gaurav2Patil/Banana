@@ -1,0 +1,160 @@
+nav{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 100%;
+}
+
+.navbar{
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-areas: "logo navbar-containts";
+    background-color: rgba(255,255,255,0.6);
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.15);
+}
+
+.navbar_logo{
+    grid-area: logo;
+    height: 75px;
+    width: auto;
+}
+
+.navbar-list{
+    grid-area: navbar-containts;
+    list-style-type: none;
+    display:flex;
+    width: auto;
+    align-items: center;
+    justify-content: flex-end;
+    gap : 2rem;
+    margin-inline-end: 1rem;
+    a{ 
+        text-decoration: none;
+        color: #8a2be2;
+        font-weight: 400;
+    }
+
+    i{
+        position: fixed;
+        left: 80%;
+        visibility: collapse;
+    }
+}
+
+.product-list li a{
+    font-size: 1ch;
+}
+
+.navbar ul li a{
+    display: block;
+    text-align: left;
+}
+
+.navbar ul li ul.product-list a {
+    display: block;
+    width: 100%;
+
+}
+
+.navbar ul li ul.product-list li a{
+    width: 100px;
+    background-color: #ffffff;
+}
+
+.navbar ul li ul.product-list{
+    width: 100%;
+    position: absolute;
+    z-index: 999;
+    display: none;
+    list-style-type: none;
+}
+
+ul li:hover ul.product-list{
+    display: block;
+}
+
+.navbar li:hover{
+    font-weight: 700;
+    transform: scale(1.3);
+    transition: 0.1s ease-out ;
+    /* background-color: #dad1ff; 
+    backdrop-filter: 20px; */
+    /* border: 1px solid blueviolet; */
+    border-bottom: 1px solid blueviolet;
+    padding: 2px 5px;
+    text-align: center;
+    text-justify: center;
+}
+
+
+.sider .sidebar{
+    position: fixed;
+    top: 0;
+    left:0;
+    list-style: none;
+    height: 100vh;
+    width: 70vw;
+    z-index: 999;
+    background-color: rgb(255,255,255);
+    backdrop-filter: blur(20px);
+    box-shadow: 10px 10px 10px rgba(0,0,0,0.5);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding-top: 2em;
+}
+
+.sider .sidebar i{
+    
+    align-self: self-start;
+    margin-inline-start: -1em;
+}
+
+.sider .sidebar li{
+    padding: 1rem;
+    width: 100%;
+}
+
+.sider .sidebar li a{
+    width: 100%;
+    text-decoration:none;
+    color : blueviolet;
+}
+
+.sider ul.sidebar a{
+    display: block;
+}
+
+.sider .sidebar li:hover a{
+    display: block;
+}
+
+.sider .sidebar li:hover{
+    font-weight: 600;
+    transform: scale(1.1);
+    transition: 0.1s;
+    border-bottom: 1px solid blueviolet;
+    padding: 5px 5px;
+}
+
+
+.navbar .navbar-list li:hover{
+    transform: scale(1.3);
+    transition: 0.1s;
+}
+
+@media only screen and (max-width: 450px) {
+    .navbar-list {
+        visibility: collapse;
+        
+        i {
+            visibility: visible;
+        }
+    }
+}
+
+/* @media only screen and (min-width: 450px) {
+    .sider{visibility: collapse;}
+} */

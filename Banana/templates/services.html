@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %} Services {% endblock title %}
+
+{% block head%}
+    <link rel="stylesheet" href="{% static 'css/services.css'%}">
+{% endblock %}
+
+{% block body %}
+    <div class="services_container">
+        <div class="context">
+            <div class="main_text">
+                <h1>Our Service Edge</h1>
+            </div>
+            <div class="head_context">
+                <p>At Banan Paints, we aim to delight our customers by providing exceptional value-added services like recommending the right products for the site, offering technical services, colour consultancy, site inspection, and direct delivery to site</p>
+            </div>
+        </div>
+    </div>
+
+    {% include "contact_now.html" %}
+    {% include "why_choose_us.html" %}
+    
+    <div class="services_1">
+        <div class="painting">
+            <div class="media">
+                <video autoplay loop muted plays-inline class="background-clip">
+                    <source src="{%static "images/video/1.mp4"%}" type="video/mp4">
+                </video>
+            </div>
+            <div class="painting_containt">
+                <ul>
+                    <h2>Painting services by Professional Banana Buddy.</h2>
+                    <p>Tired of tired walls? Banana Buddy swoops in, brush in hand, to transform your space! From drab to fab, we paint perfection, guaranteed. Breathe new life into your home with our expert touch, where quality meets affordability. Don't settle for DIY disasters, let Banana Buddy paint your dreams into reality. So ditch the drop cloths and call the pros and your walls will thank you !</p>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="services_2">
+        <div class="painting">
+            <div class="media">
+                <video autoplay loop muted plays-inline class="background-clip">
+                    <source src="{%static "images/video/2.mp4"%}" type="video/mp4">
+                </video>
+            </div>
+            <div class="painting_containt">
+                <ul>
+                    <h2>Water Proofing Services.</h2>
+                    <p>Rain got you down? Leaks got you stressed? Banana Buddy's here, waterproof shield in hand, to keep your worries at rest! We don't just paint, we seal, ensuring every crack and crevice is protected, a fortress against the elements. From basements to balconies, roofs to showers, Banana Buddy waterproofs like nobody's business, with expertise that empowers. So ditch the buckets and mops, say goodbye to soggy woes, and call Banana Buddy – your waterproof heroes!</p>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="services_3">
+        <div class="painting">
+            <div class="media">
+                <video autoplay loop muted plays-inline class="background-clip">
+                    <source src="{%static "images/video/3.mp4"%}" type="video/mp4">
+                </video>
+            </div>
+            <div class="painting_containt">
+                <ul>
+                    <h2>Designed Walls Services.</h2>
+                    <p>Wall Woes? Banana Buddy Says "WOW!" Tired of plain vanilla walls? Craving a space that screams YOU? Banana Buddy's your design dream team, transforming blank canvases into masterpieces!  We don't just paint, we craft experiences, with bold ideas and expert hands. From accent walls to full-blown murals, we bring your vision to life, adding a touch of magic to every corner. ✨ So ditch the beige and embrace the extraordinary! Call Banana Buddy - your one-stop shop for designed walls that wow!</p>
+                </ul>
+            </div>
+        </div>
+    </div>
+{% endblock %}

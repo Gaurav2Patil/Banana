@@ -1,0 +1,85 @@
+{% load static %}   
+
+{% block head %}
+    <link rel="stylesheet" href="{% static "css/get_in_touch_1.css"%}">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+{% endblock %}
+
+{% block body %}
+
+<body>
+    <section>
+     <div class="container">
+         <div class="contactInfo">
+            <div>
+             <h2>GET IN TOUCH</h2>
+             <p>Feel free to contact us anytime. We will get back to you as soon as we can!</p>
+             <ul class="info">
+                 <li>
+                     <i class="bx bx-location-plus"></i>
+                     <span>Kolekar palace, Mhalunge.</span>
+                 </li>
+                 <li>
+                     <i class="bx bx-envelope"></i>
+                     <span>BananaPaints@gmail.com</span>
+                 </li>
+                 <li>
+                     <i class="bx bx-phone"></i>
+                     <span>+91 0123456789</span>
+                 </li>
+             </ul>
+             <ul class="social-media">
+                 <li><i class="bx bxl-facebook" href="#"></i></li>
+                 <li><i class="bx bxl-instagram-alt" href="#"></i></li>
+                 <li><i class="bx bxl-youtube" href="#"></i></li>
+                 <li><i class="bx bxl-linkedin" href="#"></i></li>
+             </ul>
+            </div> 
+         </div>
+        <form action="{% url "Form" %}" method="post">
+            {% csrf_token %}
+         <div class="contactForm">
+            <h2>SAY SOMETHING</h2> 
+            <div class="formBox">
+             <div class="inputBox w50">
+                <input type="text" class="input-field" name="First-Name" id="First-Name" required>
+                 <span>First Name</span>
+             </div>
+             <div class="inputBox w50">       
+                <input type="text" class="input-field" name="Last-Name" id="Last-Name" required>
+                <span>Last Name</span>
+             </div>
+             <div class="inputBox w50">        
+                <input type="email" class="input-field" name="Email" id="Email" required>
+                <span>Email Address</span>
+             </div>
+             <div class="inputBox w50">
+                <input type="tel" class="input-field" name="Mbl_No" id="Mbl-No" pattern="^\d{10}$"required>
+                <span>Mobile Number (10 digit)</span>
+             </div>
+             <div class="inputBox w50">
+                <input type="text" class="input-field" name="Pincode" id="Pincode" pattern="^\d{6}$"required>
+                <span>Pincode</span>
+             </div>
+             <div class="inputBox w100">
+                 <textarea  name="message" required></textarea>
+                 <span>Write your message here...</span>
+             </div>
+             <div class="inputBox w100">
+                <input type="submit" value="SEND" name="send">
+            </div>
+             <select class="select_tag" name="query" id="query" onchange="changeOptions(this.value)">
+                <option value="Request Service" selected>Request Service</option>
+            </select>
+            <select class="select_tag" name="service_choice">
+                <option value="Putty Services" selected>Putty Services</option>
+            </select>
+            </div>
+         </div>
+        </form>
+     </div>
+    </section>
+ </body>
+ 
+
+{% endblock%}
