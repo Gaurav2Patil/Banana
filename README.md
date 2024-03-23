@@ -1,4 +1,4 @@
-# Banana
+# Django Paint Website
 Paint Startup Website.
 Technology : Django 4.0 , Python.
 
